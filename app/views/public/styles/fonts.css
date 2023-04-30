@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesBlack'),
+    url('../fonts/TTChocolatesBlack.woff2') format('woff2'),
+    url('../fonts/TTChocolatesBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesBlackItalic'),
+    url('../fonts/TTChocolatesBlackItalic.woff2') format('woff2'),
+    url('../fonts/TTChocolatesBlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesBold'),
+    url('../fonts/TTChocolatesBold.woff2') format('woff2'),
+    url('../fonts/TTChocolatesBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesBoldItalic'),
+    url('../fonts/TTChocolatesBoldItalic.woff2') format('woff2'),
+    url('../fonts/TTChocolatesBoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesItalic'),
+    url('../fonts/TTChocolatesItalic.woff2') format('woff2'),
+    url('../fonts/TTChocolatesItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesLight'),
+    url('../fonts/TTChocolatesLight.woff2') format('woff2'),
+    url('../fonts/TTChocolatesLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesLightItalic'),
+    url('../fonts/TTChocolatesLightItalic.woff2') format('woff2'),
+    url('../fonts/TTChocolatesLightItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesRegular'),
+    url('../fonts/TTChocolatesRegular.woff2') format('woff2'),
+    url('../fonts/TTChocolatesRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesThin'),
+    url('../fonts/TTChocolatesThin.woff2') format('woff2'),
+    url('../fonts/TTChocolatesThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTChocolatesBlack';
+  src: local('TTChocolatesThinItalic'),
+    url('../fonts/TTChocolatesThinItalic.woff2') format('woff2'),
+    url('../fonts/TTChocolatesThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}

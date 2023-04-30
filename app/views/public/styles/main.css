@@ -1,0 +1,62 @@
+:root {
+  --black: black;
+  --grey: grey;
+  --white: #fff;
+  --orange: #FFD600;
+  --dark-orange: #E1670E;
+  --light-grey: #CACACA;
+}
+
+body {
+  background-color: var(--white);
+  font-family: 'TTChocolatesBlack' , sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.params-title {
+  text-align: center;
+}
+.door_left {
+  margin-right: 20px;
+}
+
+.door_left, .door_right {
+  width: 200px;
+  height: 100%;
+  align-items: center;
+  background-color: red;
+  border: green 20px solid;
+}
+
+.left-handle, .right-handle {
+  width: 30%;
+  height: 20px;
+  background-color: blue;
+}
+
+.opening-active {
+  justify-content: flex-end;
+}
+
+.door__description {
+  text-align: center;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}

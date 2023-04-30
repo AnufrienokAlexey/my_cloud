@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="ipalexan.beget.tech" id="9daa65c3-32ff-4238-bc99-b675437e4670" port="22" nameFormat="DESCRIPTIVE" username="ipalexan_mycloud" useOpenSSHConfig="false" />
+    </configs>
+  </component>
+</project>

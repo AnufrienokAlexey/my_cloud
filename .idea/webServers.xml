@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8a95e62e-fee3-4c9d-ac6f-de0f7b4126f7" name="mycloud" url="https://yanmart.ru/">
+        <fileTransfer rootFolder="/home/i/ipalexan/mycloud/public_html" accessType="SFTP" host="ipalexan.beget.tech" port="22" sshConfigId="9daa65c3-32ff-4238-bc99-b675437e4670" sshConfig="ipalexan_mycloud@ipalexan.beget.tech:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
