@@ -2,8 +2,8 @@
 
 return [
     'host'     => 'localhost',
-    'dbname'   => 'ipalexan_falco',
-    'user'     => 'ipalexan_falco',
-    'password' => 'ipalexan_falco123Z!',
+    'dbname'   => 'ipalexan_mycloud',
+    'user'     => 'ipalexan_mycloud',
+    'password' => 'ipalexan_mycloud123Z!',
     'charset'  => 'utf8',
 ];

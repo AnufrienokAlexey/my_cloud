@@ -1,0 +1,16 @@
+.form-signin input[type="password"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[id="password_confirm"] {
+    margin-bottom: 10px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.password_not_match {
+    color: darkred;
+    font-weight: bold;
+}

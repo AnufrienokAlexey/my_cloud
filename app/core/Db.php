@@ -12,25 +12,19 @@ class Db
         $config = require 'app/config/db.php';
         $this->dbname = $config['dbname'];
         $this->db = new \PDO('mysql:host='.$config['host'].';dbname='.$config['dbname'], $config['user'], $config['password']);
-        $this->createTableDoors();
+        $this->createTableUsers();
     }
 
-    public function createTableDoors()
+    public function createTableUsers(): void
     {
-        $doors = 'doors';
         try {
             $tables = $this->db->query("SHOW TABLES FROM $this->dbname")->fetchAll(\PDO::FETCH_COLUMN);
-            if (!in_array($doors, $tables)) {
+            if (!in_array('users', $tables)) {
                 $this->db->exec("
-                CREATE TABLE `doors` (
+                CREATE TABLE `users` (
                     id integer auto_increment primary key,
-                    color varchar(30),
-                    skin_color varchar(30),
-                    handle_color varchar(30),
-                    width smallint(30),
-                    height smallint(30),
-                    opening varchar(30),
-                    accessories varchar(30)
+                    email varchar(256),
+                    password varchar(256)                    
                     );
                 ");
             }
@@ -46,6 +40,6 @@ class Db
 
     public function get($sql)
     {
-        return $this->db->query($sql);
+        return $this->db->query($sql)->fetchAll(2);
     }
 }

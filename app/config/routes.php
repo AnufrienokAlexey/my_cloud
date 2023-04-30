@@ -5,17 +5,9 @@ return [
         'controller' => 'main',
         'action' => 'index'
     ],
-    'contacts' => [
+    'about_me' => [
         'controller' => 'main',
-        'action' => 'contact'
-    ],
-    'sendform' => [
-        'controller' => 'main',
-        'action' => 'sendform'
-    ],
-    'getpdf' => [
-        'controller' => 'main',
-        'action' => 'getpdf'
+        'action' => 'about_me'
     ],
     'account/login' => [
         'controller' => 'account',
@@ -24,9 +16,5 @@ return [
     'account/register' => [
         'controller' => 'account',
         'action' => 'register'
-    ],
-    'news/show' => [
-        'controller' => 'news',
-        'action' => 'show'
     ],
 ];
