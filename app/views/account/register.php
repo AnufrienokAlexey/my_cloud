@@ -162,6 +162,10 @@
             echo '<p class="password_not_match">' . $_SESSION['email_exist'] . '</p>';
             unset($_SESSION['email_exist']);
         }
+        if (isset($_SESSION['wrong_password'])) {
+            echo '<p class="password_not_match">' . $_SESSION['wrong_password'] . '</p>';
+            unset($_SESSION['wrong_password']);
+        }
         if (isset($_SESSION['password_not_match'])) {
             echo '<p class="password_not_match">' . $_SESSION['password_not_match'] . '</p>';
             unset($_SESSION['password_not_match']);

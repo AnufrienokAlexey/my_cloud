@@ -33,7 +33,8 @@ class Db
         }
     }
 
-    public function add($sql) {
+    public function add($sql)
+    {
         $sth = $this->db->prepare($sql);
         $sth->execute();
     }
@@ -42,4 +43,6 @@ class Db
     {
         return $this->db->query($sql)->fetchAll(2);
     }
+
+
 }
