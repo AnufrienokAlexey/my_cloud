@@ -17,4 +17,8 @@ return [
         'controller' => 'account',
         'action' => 'register'
     ],
+    'mycloud' => [
+        'controller' => 'mycloud',
+        'action' => 'index'
+    ],
 ];

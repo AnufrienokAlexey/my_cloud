@@ -20,4 +20,9 @@ class Account extends Model
     {
         return $this->db->get("SELECT * FROM users WHERE `email` = '$email'");
     }
+
+    public function getEmailAndPassword($email, $password)
+    {
+        return $this->db->get("SELECT * FROM users WHERE `email` = '$email' AND `password` = '$password'");
+    }
 }

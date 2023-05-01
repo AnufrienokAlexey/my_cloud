@@ -7,10 +7,10 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        if (empty($_SESSION['user'])) {
-            $this->view->render('Главная страница');
+        if (!empty($_SESSION['email'])) {
+            $this->view->redirect('mycloud');
         } else {
-            echo 'redirect $session';
+            $this->view->redirect('account/login');
         }
     }
 

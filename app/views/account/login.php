@@ -1,11 +1,19 @@
 <script src="/app/views/assets/dist/js/bootstrap.bundle.min.js"></script>
 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.111.3">
+<title>Signin Template · Bootstrap v5.3</title>
+
+<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+
 
 
 
 
 <link href="/app/views/assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
 
 <style>
     .bd-placeholder-img {
@@ -84,7 +92,6 @@
 
 <!-- Custom styles for this template -->
 <link href="/app/views/account/sign-in.css" rel="stylesheet">
-<link rel="stylesheet" href="/app/views/account/register.css">
 </head>
 <body class="text-center">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -140,46 +147,39 @@
 
 
 <main class="form-signin w-100 m-auto">
-    <form action="register" method="post">
+    <form action="login" method="post">
         <img class="mb-4" src="/app/views/public/images/favicon.ico" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
+        <h1 class="h3 mb-3 fw-normal">Вход</h1>
 
         <div class="form-floating">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
             <label for="floatingInput">Электронная почта</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="Пароль" name="password">
-            <label for="password">Пароль</label>
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+            <label for="floatingPassword">Пароль</label>
         </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="password_confirm" placeholder="Повторите пароль" name="password_confirm">
-            <label for="password_confirm">Повторите пароль</label>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Запомнить меня
+            </label>
         </div>
 
         <?php
-        if (isset($_SESSION['email_exist'])) {
-            echo '<p class="password_not_match">' . $_SESSION['email_exist'] . '</p>';
-            unset($_SESSION['email_exist']);
-        }
-        if (isset($_SESSION['wrong_password'])) {
-            echo '<p class="password_not_match">' . $_SESSION['wrong_password'] . '</p>';
-            unset($_SESSION['wrong_password']);
-        }
-        if (isset($_SESSION['password_not_match'])) {
-            echo '<p class="password_not_match">' . $_SESSION['password_not_match'] . '</p>';
-            unset($_SESSION['password_not_match']);
+        if (isset($_SESSION['success_register'])) {
+            echo '<p class="sign-in_title">' . $_SESSION['success_register'] . '</p>';
+            unset($_SESSION['success_register']);
         }
         ?>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Зарегистрироваться</button>
-        <a href="login" class="mt-2 btn btn-outline-primary">Вход</a>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Войти</button>
+        <a href="register" class="mt-2 btn btn-outline-primary">Зарегистрироваться</a>
         <p class="mt-5 mb-3 text-body-secondary">&copy;
             <a href="/about_me">Alexey Anufrienok</a>
             2023
         </p>
     </form>
-
 </main>
 
 

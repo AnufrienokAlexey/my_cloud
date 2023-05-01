@@ -7,7 +7,15 @@ class AccountController extends Controller
 {
     public function loginAction()
     {
-        $this->view->redirect('/');
+        if (!empty($_POST['email']) AND !empty($_POST['password'])) {
+            $result = $this->model->getEmailAndPassword($_POST['email'], $_POST['password']);
+            if ($result) {
+                $_SESSION['email'] = $_POST['email'];
+                $this->view->redirect('/mycloud');
+            } $this->view->render('Вход');
+        } else {
+            $this->view->render('Вход');
+        }
     }
 
     public function registerAction()
