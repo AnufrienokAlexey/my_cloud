@@ -8,11 +8,14 @@ class AccountController extends Controller
     public function loginAction()
     {
         if (!empty($_POST['email']) AND !empty($_POST['password'])) {
-            $result = $this->model->getEmailAndPassword($_POST['email'], $_POST['password']);
+            $result = $this->model->getEmailAndPassword($_POST['email'], md5($_POST['password']));
             if ($result) {
                 $_SESSION['email'] = $_POST['email'];
                 $this->view->redirect('/mycloud');
-            } $this->view->render('Вход');
+            } else {
+                $_SESSION['unsuccessfully_login'] = 'Вы неверно ввели данные. Попробуйте еще раз.';
+                $this->view->render('Вход');
+            }
         } else {
             $this->view->render('Вход');
         }
@@ -43,5 +46,11 @@ class AccountController extends Controller
         } else {
             $this->view->render('Регистрация');
         }
+    }
+
+    public function logoutAction()
+    {
+        session_destroy();
+        $this->view->redirect('/');
     }
 }

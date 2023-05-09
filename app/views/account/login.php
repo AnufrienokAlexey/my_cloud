@@ -160,16 +160,20 @@
             <label for="floatingPassword">Пароль</label>
         </div>
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Запомнить меня
-            </label>
-        </div>
+<!--        <div class="checkbox mb-3">-->
+<!--            <label>-->
+<!--                <input type="checkbox" value="remember-me"> Запомнить меня-->
+<!--            </label>-->
+<!--        </div>-->
 
         <?php
         if (isset($_SESSION['success_register'])) {
             echo '<p class="sign-in_title">' . $_SESSION['success_register'] . '</p>';
             unset($_SESSION['success_register']);
+        }
+        if (isset($_SESSION['unsuccessfully_login'])) {
+            echo '<p class="unsuccessfully_login">' . $_SESSION['unsuccessfully_login'] . '</p>';
+            unset($_SESSION['unsuccessfully_login']);
         }
         ?>
 

@@ -138,7 +138,6 @@
     </ul>
 </div>
 
-
 <main class="form-signin w-100 m-auto">
     <form action="register" method="post">
         <img class="mb-4" src="/app/views/public/images/favicon.ico" alt="" width="72" height="72">

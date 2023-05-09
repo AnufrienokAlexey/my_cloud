@@ -17,8 +17,16 @@ return [
         'controller' => 'account',
         'action' => 'register'
     ],
+    'account/logout' => [
+        'controller' => 'account',
+        'action' => 'logout'
+    ],
     'mycloud' => [
         'controller' => 'mycloud',
         'action' => 'index'
+    ],
+    'mycloud/savefile' => [
+        'controller' => 'mycloud',
+        'action' => 'savefile'
     ],
 ];

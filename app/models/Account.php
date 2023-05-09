@@ -13,6 +13,7 @@ class Account extends Model
 
     public function addUser($email, $password)
     {
+        $password = md5($password);
         $this->db->add("INSERT INTO users(`id`, `email`, `password`) VALUES (null , '$email', '$password')");
     }
 
