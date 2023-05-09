@@ -7,6 +7,7 @@ class MycloudController extends Controller
 {
     public function indexAction()
     {
+        $this->getUploadFiles();
         $this->view->render('Мое хранилище');
     }
 
@@ -28,17 +29,24 @@ class MycloudController extends Controller
 
             foreach ($_FILES["fileToUpload"] as $key => $file) {
                 if ($file["size"] > 3 * 1024 * 1024) {
-                    echo "Извините, загружаемый файл не должен превышать 3 МБ";
+                    echo "Извините, загружаемый файл не должен превышать 3 МБ".PHP_EOL;
+                    echo '<a href="/">Вернуться</a>';
                     return;
                 }
                 $target_file = $target_dir . basename($file["name"]);
-                if (move_uploaded_file($file["tmp_name"], "$target_file")) {
-                } else {
-                    echo "Возможная атака с помощью файловой загрузки!\n";
-                }
+                move_uploaded_file($file["tmp_name"], "$target_file");
             }
 
-            $this->view->redirect('/mycloud');
+            $this->view->redirect('/');
         }
+    }
+
+    public function getUploadFiles()
+    {
+        $target_dir = 'app/uploads/'.$_SESSION['email'].'/';
+        if (!is_dir($target_dir)) {
+            mkdir($target_dir);
+        }
+        $_SESSION['uploaded'] = array_diff(scandir($_SERVER['DOCUMENT_ROOT'].'/'.$target_dir), array('..', '.'));
     }
 }

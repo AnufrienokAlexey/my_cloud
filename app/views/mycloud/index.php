@@ -25,14 +25,29 @@
             <a href="account/logout" class="">Выход</a>
         </div>
     </header>
+    <div>
+        <form action="mycloud/savefile" enctype="multipart/form-data" method="post">
+            <div class="input-group">
+                <input class="form-control" type="file" name="fileToUpload[]" id="fileToUpload" multiple>
+                <input class="btn btn-outline-primary" type="submit" value="Отправить" name="downloaded_file">
+            </div>
+        </form>
+    </div>
+    <div>
+        <?php
+        if (isset($_SESSION['uploaded'])) { ?>
+            <ul class="list-reset">
+                <?php
+                foreach ($_SESSION['uploaded'] as $files) { ?>
+                    <li><a href="/./app/uploads/<?php echo $_SESSION['email'].'/'.$files?>" download><?php echo $files?></a></li>
+                <?php } ?>
+            </ul>
+        <?php
+            unset($_SESSION['uploaded']);
+        } ?>
+    </div>
 </div>
 
-<form action="mycloud/savefile" enctype="multipart/form-data" method="post">
-    <div class="input-group">
-        <input class="form-control" type="file" name="fileToUpload[]" id="fileToUpload" multiple>
-        <input class="btn btn-outline-primary" type="submit" value="Отправить" name="downloaded_file">
-    </div>
-</form>
 </body>
 </html>
 

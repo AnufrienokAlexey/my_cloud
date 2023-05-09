@@ -144,15 +144,15 @@
         <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
 
         <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
             <label for="floatingInput">Электронная почта</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="Пароль" name="password">
+            <input type="password" class="form-control" id="password" placeholder="Пароль" name="password" required>
             <label for="password">Пароль</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="password_confirm" placeholder="Повторите пароль" name="password_confirm">
+            <input type="password" class="form-control" id="password_confirm" placeholder="Повторите пароль" name="password_confirm" required>
             <label for="password_confirm">Повторите пароль</label>
         </div>
 
@@ -180,8 +180,6 @@
     </form>
 
 </main>
-
-
 
 </body>
 </html>
